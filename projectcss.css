@@ -1,0 +1,70 @@
+*{
+cursor: url('images/ncursor.png'),auto;
+}
+body{     
+    font-family: 'Dancing script';
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.jpg'); 
+    background-size: cover;      
+    height: 100vh;
+    }
+    .heading{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+    .nb{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        position: relative;
+        height: 565px; 
+        width: 441px; 
+        background-image: url(images/page1.png); 
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        margin-left: 20vb;
+        float: left;
+        font-size: 30px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+.input{
+    display: flex;
+    height: 20%;
+    width: 40%;
+    float: right;
+    margin-right: 20vb;
+    padding:2px;
+}
+#task{
+    height:5vh;
+    width:50vb;
+    border-radius: 20px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#submit{
+    height: 5vh;
+    width: 8vb;
+    border-radius: 20px;
+    font-size: large;
+}
+.look{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        height:60vh; 
+        width: 80vb; 
+        background-image: url(images/cup.png); 
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        margin-bottom: 40vh;
+        
+        
+    }
