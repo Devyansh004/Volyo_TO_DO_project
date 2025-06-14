@@ -1,70 +1,168 @@
-*{
-cursor: url('images/ncursor.png'),auto;
+* {
+  cursor: url('images/ncursor.png'), auto;
+  box-sizing: border-box;
 }
-body{     
-    font-family: 'Dancing script';
-    margin: 0;
-    padding: 0;
-    background-image: url('images/background.jpg'); 
-    background-size: cover;      
-    height: 100vh;
-    }
-    .heading{
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-    }
-    .nb{
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        position: relative;
-        height: 565px; 
-        width: 441px; 
-        background-image: url(images/page1.png); 
-        background-position: center; 
-        background-repeat: no-repeat;
-        background-size: cover; 
-        margin-left: 20vb;
-        float: left;
-        font-size: 30px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        white-space: normal;
-    }
 
-.input{
-    display: flex;
-    height: 20%;
-    width: 40%;
-    float: right;
-    margin-right: 20vb;
-    padding:2px;
+body {
+  font-family: 'Dancing script';
+  margin: 0;
+  padding: 0;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  height: 100vh;
 }
-#task{
-    height:5vh;
-    width:50vb;
-    border-radius: 20px;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+
+/* Heading */
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#submit{
-    height: 5vh;
-    width: 8vb;
-    border-radius: 20px;
-    font-size: large;
+
+/* Scrollbar */
+.nb::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
 }
-.look{
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        height:60vh; 
-        width: 80vb; 
-        background-image: url(images/cup.png); 
-        background-position: center; 
-        background-repeat: no-repeat;
-        background-size: cover; 
-        margin-bottom: 40vh;
-        
-        
-    }
+.nb::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 10px;
+}
+
+/* Notebook */
+.nb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 525px;
+  width: 441px;
+  background-image: url(images/page1.png);
+  background-position: center -28px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 20vb;
+  float: left;
+  font-size: 30px;
+  padding: 40px 30px 30px 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+  scrollbar-width: thin;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+
+  /* Make responsive */
+  max-width: 90vw;
+}
+
+/* Input Form */
+.input {
+  display: flex;
+  height: 20%;
+  width: 40%;
+  float: right;
+  margin-right: 20vb;
+  padding: 2px;
+
+  /* Responsive stack on smaller screens */
+  flex-direction: column;
+  gap: 1vh;
+}
+
+#task {
+  height: 5vh;
+  width: 50vb;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+  margin-top: 5px;
+
+  max-width: 100%; /* fit on smaller screens */
+}
+
+#submit {
+  height: 3rem;
+  width: 8vb;
+  line-height: 3;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Cup image */
+.look {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 80vb;
+  background-image: url(images/cup.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 40vh;
+
+  max-width: 95vw;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+@media (max-width: 768px) {
+  .nb {
+    font-size: 20px;
+    height: auto;
+    margin-left: 5vw;
+    width: 90vw;
+  }
+
+  .input {
+    width: 90%;
+    margin: auto;
+    float: none;
+    align-items: center;
+  }
+
+  #task {
+    width: 90vw;
+    font-size: 20px;
+  }
+
+  #submit {
+    width: 120px;
+    font-size: 16px;
+  }
+
+  .look {
+    width: 90vw;
+    height: 35vh;
+    margin-bottom: 10vh;
+  }
+
+  .heading h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nb {
+    font-size: 16px;
+  }
+
+  #task {
+    font-size: 16px;
+  }
+
+  #submit {
+    font-size: 14px;
+  }
+
+  .heading h3 {
+    font-size: 28px;
+  }
+}
